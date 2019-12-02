@@ -3,12 +3,12 @@ version: 0.2
 env:
   variables:
     # SOURCE_VERSION: $(echo $CODEBUILD_RESOLVED_SOURCE_VERSION)
-    REPO_NAME: "<your repository name>"
+    REPO_NAME: "https://github.com/ohbuchim/sagemaker-cicd-byoa.git"
     ENTRY_POINT: "cifar10.py"
     SOURCE_DIR: "src"
-    INPUT_PATH: "s3://sagemaker-cicd/data/DEMO-cifar10"
-    OUTPUT_PATH: "s3://sagemaker-cicd/codebuild/keras"
-    ROLE: "<your role name>"
+    INPUT_PATH: "s3://sagemaker-cicd-ohbuchi/data/DEMO-cifar10"
+    OUTPUT_PATH: "s3://sagemaker-cicd-ohbuchi/codebuild/keras"
+    ROLE: "arn:aws:iam::420964472730:role/service-role/codebuild-sagemaker-cicd-endpoint-dev-service-role"
 
 phases:
   install:
