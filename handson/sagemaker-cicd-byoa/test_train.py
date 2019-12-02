@@ -22,7 +22,7 @@ if __name__ == '__main__':
     model_dir = args.output_s3
     repo = args.repo
     version = args.version
-    code_url = repo + '/tree/' + version
+    code_url = repo + '/tree/' + version + '/master/handson/sagemaker-cicd-byoa'
     role = args.role
 
     cifar10_estimator = TensorFlow(base_job_name='cifar10',
